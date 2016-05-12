@@ -74,7 +74,7 @@ namespace FaceDetectionAppEmgu
             int minNeighbours = 4;
             System.Drawing.Size minSize = new System.Drawing.Size(grayImage.Width / 8, grayImage.Height / 8);
             System.Drawing.Size maxSize = new System.Drawing.Size(grayImage.Width / 2, grayImage.Height / 2);
-            classifier = new CascadeClassifier("./haarcascade_frontalface_alt2.xml");
+            classifier = new CascadeClassifier("haarcascades/haarcascade_frontalface_alt2.xml");
             var faces = classifier.DetectMultiScale(grayImage, scaleNumber, minNeighbours, minSize, maxSize);
 
             foreach (var face in faces)
